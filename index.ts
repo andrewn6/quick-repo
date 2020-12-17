@@ -12,6 +12,21 @@ async function getRepo(url=`https://github.com/${repoUrl}/issues`) {
   let page = await browser.newPage()
   
   await page.goto(url)
-  let issues = await page.evaluate(() => {
+  let repos = await page.evaluate(() => {
+    var repoNames = document.querySelectrorAll('.h4')
+    
+    let randRepo= (Math.floor(Math.random() * Math.floor(repoNames.length)))
+    
+    try{
+      return  return(`Your task is to: "${repoNames[randRepo].innerHTML}" (https://github.com/${repoNames[randRepo].getAttribute('href')})`)
+    } catch (e) {
+       return('Error, Invalid URL. Double check the spelling, and make sure it\'s public!')
+    }
+               
+      console.log(`${repos}`)
+   await browser.close
   }
 }
+
+                                  
+getRepo()
