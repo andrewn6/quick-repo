@@ -13,7 +13,7 @@ async function getRepo(url=`https://github.com/${repoUrl}/issues`) {
   
   await page.goto(url)
   let repos = await page.evaluate(() => {
-    var repoNames = document.querySelectrorAll('.h4')
+    var repoNames = document.querySelectorAll('.h4')
     
     let randRepo= (Math.floor(Math.random() * Math.floor(repoNames.length)))
     
