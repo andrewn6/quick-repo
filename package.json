@@ -1,1 +1,22 @@
 
+
+  "name": "gitrepo,
+  "version": "0.0.2",
+  "description": "Fetches a random repository from github. ",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "puppeteer": "^5.5.0"
+  },
+  "bin": {
+    "gitssues": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "issuehunt"
+  ],
+  "author": "Andrew Nijmeh",
+  "license": "MIT"
+}
