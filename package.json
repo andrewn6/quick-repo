@@ -1,5 +1,4 @@
 {
-
   "name": "gitrepo,
   "version": "0.0.2",
   "description": "Fetches a random repository from github. ",
